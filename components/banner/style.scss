@@ -1,0 +1,38 @@
+#banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+
+  .gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(20, 169, 109);
+    background: linear-gradient(
+      90deg,
+      rgba(20, 169, 109, 1) 0%,
+      rgba(255, 216, 78, 1) 100%
+    );
+    opacity: 0.6;
+  }
+
+  .container {
+    height: 800px;
+    width: 100%;
+    background-image: url("../../assets/images/banner.jpg");
+    background-size: cover;
+  }
+  .curve {
+    position: absolute;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    background-image: url("../../assets/images/curve.png");
+    background-size: cover;
+  }
+}

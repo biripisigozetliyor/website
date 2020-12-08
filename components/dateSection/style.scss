@@ -1,0 +1,40 @@
+@import "../../assets/style/global.scss";
+.date {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 49%;
+  background-color: $white;
+  border-bottom: 20px solid $green;
+  border-radius: $radius-lg;
+  padding: $space-g 0;
+  bottom: 0;
+
+  .selectPet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+
+    button {
+      width: 90px;
+      height: 90px;
+      border: 2px solid $green;
+      outline: none;
+      border-radius: $radius;
+      background-color: $white;
+      color: $green;
+      font-size: $text-lg;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: $green;
+        color: $white;
+      }
+    }
+  }
+}

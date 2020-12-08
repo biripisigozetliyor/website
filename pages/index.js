@@ -1,14 +1,15 @@
-import Layout from "../components/layout"
+// import Layout from "../components/layout"
 import Head from "next/head"
+import Banner from "../components/banner"
 
 function HomePage() {
   return (
-    <Layout>
+    <>
       <Head>
         <title>Aanasayfa</title>
       </Head>
-      <h1>Home Page</h1>
-    </Layout>
+      <Banner />
+    </>
   )
 }
 
