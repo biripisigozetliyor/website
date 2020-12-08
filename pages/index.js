@@ -5,7 +5,7 @@ function HomePage() {
   return (
     <Layout>
       <Head>
-        <title>Anasayfa</title>
+        <title>Aanasayfa</title>
       </Head>
       <h1>Home Page</h1>
     </Layout>
