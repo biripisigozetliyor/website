@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-function Navigation() {
+function LayoutNavigation() {
   return (
     <nav>
       <Link href="/">
@@ -13,4 +13,4 @@ function Navigation() {
   )
 }
 
-export default Navigation
+export default LayoutNavigation

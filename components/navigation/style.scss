@@ -1,0 +1,11 @@
+@import "../../assets/style/global.scss";
+.mainNavigation {
+  display: flex;
+  margin-right: 250px;
+  a {
+    color: $white;
+    margin-right: $space-sg;
+    font-size: $text-lg;
+    transition: 0.3s;
+  }
+}
