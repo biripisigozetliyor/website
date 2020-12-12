@@ -3,17 +3,17 @@ import LeftPaw from "../../assets/svg/leftPaw"
 import RighttPaw from "../../assets/svg/rightPaw"
 import Calander from "../../assets/svg/calander"
 import Location from "../../assets/svg/location"
-import SmallPaw from "../../assets/svg/smallPaw"
+import Button from "../button"
 
 const DateSection = () => {
   return (
     <div className="date">
       <div className="selectPet">
-        <button className="pet">Kedi</button>
-        <button className="pet">Kuş</button>
-        <button className="pet">Balık</button>
-        <button className="pet">Sürüngen</button>
-        <button className="pet">Kemirgen</button>
+        <Button type="square" value="Kedi" />
+        <Button type="square" value="Kuş" />
+        <Button type="square" value="Balık" />
+        <Button type="square" value="Sürüngen" />
+        <Button type="square" value="Kemirgen" />
       </div>
       <div className="form">
         <div className="ddWrapper">
@@ -36,10 +36,9 @@ const DateSection = () => {
             </div>
           </div>
         </div>
-        <button className="getDate">
-          <SmallPaw />
-          Randevu Al
-        </button>
+        <div className="btn">
+          <Button type="iconicBorder" value="Randevu Al" icon="smallPaw" />
+        </div>
       </div>
       <div className="leftSide">
         <LeftPaw />

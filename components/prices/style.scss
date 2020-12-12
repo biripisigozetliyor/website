@@ -1,0 +1,74 @@
+@import "../../assets/style/global.scss";
+#prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: $space-xg;
+  padding: $space-g 0;
+  background: rgb(64, 72, 79);
+  background: linear-gradient(171deg, $night 16%, $green 100%);
+}
+
+.boxWrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin-top: $space-xxg;
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $space-xxl;
+    width: 30%;
+    border-radius: $radius;
+    background: rgb(64, 72, 79);
+    background: linear-gradient(171deg, $green 16%, $night 100%);
+
+    .name {
+      font-size: $text-sg;
+      font-weight: $semibold;
+      color: $white;
+    }
+    .price {
+      margin-top: $text-lg;
+      font-size: $text-xxg;
+      font-weight: $bold;
+      color: $white;
+
+      &::before {
+        content: "₺";
+        font-size: $text-sg;
+      }
+    }
+    .info {
+      margin-top: $text-xxl;
+      font-size: $text-ml;
+      font-weight: $regular;
+      color: $white;
+    }
+
+    .block {
+      margin-top: $text-xxl;
+      width: 40%;
+      border: 1px solid $white;
+    }
+    .campaign {
+      margin-top: $text-xxl;
+      font-size: $text-m;
+      font-weight: $regular;
+      color: $white;
+      opacity: 0.9;
+    }
+  }
+
+  .up {
+    position: relative;
+    bottom: 60px;
+  }
+}
