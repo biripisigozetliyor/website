@@ -1,0 +1,217 @@
+@import "../../assets/style/global.scss";
+
+.touchstone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#howToWork {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: $space-xxg * 1.5;
+  padding: $space-xl 0;
+
+  .roadMapSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    // padding-top: $space-m;
+
+    .startingPoint {
+      @extend .touchstone;
+      .point {
+        width: 40px;
+        height: 40px;
+        border: 8px solid $green;
+        border-radius: 100%;
+      }
+
+      .big {
+        position: absolute;
+        left: 0;
+        width: 150px;
+        margin-left: $space-g;
+        font-size: $text-xl;
+        font-weight: $semibold;
+        color: $green;
+      }
+    }
+    .midPoint {
+      @extend .touchstone;
+
+      .point {
+        width: 28px;
+        height: 28px;
+        border: 5px solid $green;
+        border-radius: 100%;
+      }
+      .mid {
+        position: absolute;
+        left: 0;
+        width: 200px;
+        margin-left: $space-sg;
+        font-size: $text-xl;
+        font-weight: $semibold;
+        color: $green;
+      }
+    }
+    .container {
+      margin: $space-xl 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 50%;
+
+      .step {
+        width: 225px;
+        font-size: $text-lg;
+        font-weight: $medium;
+        color: $black;
+      }
+
+      //top
+      .left {
+        display: flex;
+        flex-direction: column;
+        width: 42%;
+
+        .row {
+          width: 100%;
+          text-align: end;
+          display: flex;
+          position: relative;
+          bottom: $space-xxl;
+          justify-content: flex-end;
+          margin-bottom: 125px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .center {
+        width: 16%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        width: 42%;
+
+        .row {
+          width: 100%;
+          text-align: start;
+          display: flex;
+          position: relative;
+          bottom: 30px;
+          justify-content: flex-start;
+        }
+      }
+
+      //mid
+      .midLeft {
+        display: flex;
+        flex-direction: column;
+        width: 42%;
+
+        .row {
+          width: 100%;
+          text-align: end;
+          display: flex;
+          position: relative;
+          justify-content: flex-end;
+          margin-bottom: 150px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .midCenter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 16%;
+
+        .lPoint {
+          width: 13px;
+          height: 13px;
+          background-color: $gray;
+          border-radius: 100%;
+          margin-bottom: $space-lg;
+        }
+        svg {
+          margin-bottom: $space-xl;
+        }
+      }
+      .midRight {
+        display: flex;
+        flex-direction: column;
+        width: 42%;
+
+        .row {
+          width: 100%;
+          text-align: start;
+          display: flex;
+          position: relative;
+          justify-content: flex-start;
+          margin-bottom: 150px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      //bottom
+      .bottomLeft {
+        display: flex;
+        flex-direction: column;
+        width: 42%;
+
+        .row {
+          width: 100%;
+          text-align: end;
+          display: flex;
+          position: relative;
+          top: $space-sg;
+          justify-content: flex-end;
+        }
+      }
+      .bottomCenter {
+        width: 16%;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .bottomRight {
+        display: flex;
+        flex-direction: column;
+        width: 42%;
+
+        .row {
+          width: 100%;
+          text-align: start;
+          display: flex;
+          position: relative;
+          bottom: 35px;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}
