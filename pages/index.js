@@ -1,6 +1,7 @@
 // import Layout from "../components/layout"
 import Head from "next/head"
 import Banner from "../components/banner"
+import OtherServices from "../components/otherServices"
 import Prices from "../components/prices"
 import RoadMap from "../components/roadMap"
 
@@ -13,6 +14,7 @@ function HomePage() {
       <Banner />
       <RoadMap />
       <Prices />
+      <OtherServices />
     </>
   )
 }

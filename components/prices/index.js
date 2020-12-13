@@ -5,7 +5,7 @@ function Prices() {
   return (
     <section id="prices">
       <div className="header">
-        <Title value="Paketlerimiz" type="white" />
+        <Title value="Ziyaret Paketlerimiz" type="white" />
       </div>
       <div class="boxWrapper">
         <Package
