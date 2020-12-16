@@ -1,11 +1,19 @@
 @import "../../assets/style/global.scss";
 .mainNavigation {
   display: flex;
-  margin-right: 250px;
+  justify-content: space-between;
+  margin-right: 10%;
+  width: 400px;
   a {
     color: $white;
-    margin-right: $space-sg;
     font-size: $text-lg;
     transition: 0.3s;
   }
+}
+
+@media screen and (max-width: 768px) {
+ .mainNavigation{
+   margin-right: 0 !important;
+   
+ }
 }
