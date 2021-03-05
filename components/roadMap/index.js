@@ -5,95 +5,112 @@ import Road2 from "../../assets/svg/road_2"
 function RoadMap() {
   return (
     <section id="howToWork">
-      <div className="roadMapSection">
-        <div className="startingPoint">
-          <div className="point"></div>
-          <span className="big">Randevu Al</span>
-        </div>
-        <div className="container">
-          <div className="left">
-            <div className="row">
-              <span className="step">Tanışalım</span>
-            </div>
-            <div className="row">
-              <span className="step">Güvenliği Sağlayalım</span>
-            </div>
-          </div>
-          <div className="center">
-            <Road1 />
-          </div>
-          <div className="right">
-            <div className="row">
-              <span className="step">Rutinleri Öğrenelim</span>
-            </div>
+      <div className="roadMapContainer">
+        <div className="point">
+          <div className="wrapper">
+            <p className="tag">Randevu Al</p>
           </div>
         </div>
-      </div>
-      <div className="roadMapSection">
-        <div className="midPoint">
-          <div className="point"></div>
-          <span className="mid">Tatil Başlasın</span>
+        <div className="row left p-t-50">
+          <div className="box">
+            <div className="content">
+              <div className="info">
+                <p className="tag">Tanışalım</p>
+              </div>
+              <div className="imgWrapper-r">
+                <img className="emj-handeshake" src="/handshake.png" alt="" />
+              </div>
+            </div>
+            <div className="line"></div>
+          </div>
         </div>
-        <div className="container">
-          <div className="midLeft">
-            <div className="row">
-              <span className="step">Dostumuzu Besleyelim</span>
-            </div>
-            <div className="row">
-              <span className="step">Temizleyelim</span>
-            </div>
-            <div className="row">
-              <span className="step">Yumuşacık Olana Kadar Tarayalım</span>
-            </div>
-          </div>
-          <div className="midCenter">
-            <div className="lPoint"></div>
-            <div className="lPoint"></div>
-            <div className="lPoint"></div>
-            <Cat />
-            <div className="lPoint"></div>
-            <div className="lPoint"></div>
-            <div className="lPoint"></div>
-            <div className="lPoint"></div>
-            <Confetti />
-            <div className="lPoint"></div>
-            <div className="lPoint"></div>
-          </div>
-          <div className="midRight">
-            <div className="row">
-              <span className="step">Beraber Eğlenelim</span>
-            </div>
-            <div className="row">
-              <span className="step">Sağlık Sorunları İle İlgilenelim</span>
+        <div className="row right">
+          <div className="box">
+            <div className="line"></div>
+            <div className="content">
+              <div className="imgWrapper-l">
+                <img className="emj-cam" src="/cam.png" alt="" />
+              </div>
+              <div className="info">
+                <p className="tag">Güvenliği Sağlayalım</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="roadMapSection">
-        <div className="midPoint">
-          <div className="point"></div>
-          <span className="mid">Özlem Son Bulsun</span>
-        </div>
-        <div className="container">
-          <div className="bottomLeft">
-            <div className="row">
-              <span className="step">
-                Yeni dostluklar kurmamıza yardımcı olabilirsin
-              </span>
+        <div className="row left p-b-50">
+          <div className="box">
+            <div className="content">
+              <div className="info">
+                <p className="tag">Rutinleri Öğrenelim</p>
+              </div>
+              <div className="imgWrapper-r">
+                <img className="emj-square" src="/learn.png" alt="" />
+              </div>
             </div>
-          </div>
-          <div className="bottomCenter">
-            <Road2 />
-          </div>
-          <div className="bottomRight">
-            <div className="row right">
-              <span className="step">Deneyimlerini Paylaşabilirsin</span>
-            </div>
+            <div className="line"></div>
           </div>
         </div>
-        <div className="midPoint">
-          <div className="point"></div>
-          <span className="mid">Tekrar Buluşalım</span>
+        <div className="point">
+          <div className="wrapper">
+            <p className="tag">Tatil Başlasın</p>
+          </div>
+        </div>
+        <div className="row right p-t-50">
+          <div className="box">
+            <div className="line"></div>
+            <div className="content">
+              <div className="imgWrapper-l">
+                <img className="emj-square" src="/food.png" alt="" />
+              </div>
+              <div className="info">
+                <p className="tag">Dostumuzu Besleyelim</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row left">
+          <div className="box">
+            <div className="content">
+              <div className="info">
+                <p className="tag">Dostumuzu Temizleyelim</p>
+              </div>
+              <div className="imgWrapper-r">
+                <img className="emj-poop" src="/poop.png" alt="" />
+              </div>
+            </div>
+            <div className="line"></div>
+          </div>
+        </div>
+        <div className="row right">
+          <div className="box">
+            <div className="line"></div>
+            <div className="content">
+              <div className="imgWrapper-l">
+                <img className="emj-square" src="/cat.png" alt="" />
+              </div>
+              <div className="info">
+                <p className="tag">Dostumuzu Tarayalım</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row left p-b-50">
+          <div className="box">
+            <div className="content">
+              <div className="info">
+                <p className="tag">Beraber Eğlenelim</p>
+              </div>
+              <div className="imgWrapper-r">
+                <img className="emj-square" src="/game.png" alt="" />
+              </div>
+            </div>
+            <div className="line"></div>
+          </div>
+        </div>
+        <div className="point">
+          <div className="wrapper">
+            <p className="tag">Tekrar Buluşalım</p>
+          </div>
         </div>
       </div>
     </section>
