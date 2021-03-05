@@ -1,23 +1,19 @@
-import Cat from "../../assets/svg/cat"
-import Confetti from "../../assets/svg/confetti"
-import Road1 from "../../assets/svg/road_1"
-import Road2 from "../../assets/svg/road_2"
 function RoadMap() {
   return (
     <section id="howToWork">
       <div className="roadMapContainer">
         <div className="point">
-          <div className="wrapper">
+          <div className="wrapper bg-light-green">
             <p className="tag">Randevu Al</p>
           </div>
         </div>
-        <div className="row left p-t-50">
+        <div className="row left p-t-50 ">
           <div className="box">
             <div className="content">
               <div className="info">
                 <p className="tag">Tanışalım</p>
               </div>
-              <div className="imgWrapper-r">
+              <div className="imgWrapper-r bg-red">
                 <img className="emj-handeshake" src="/handshake.png" alt="" />
               </div>
             </div>
@@ -28,7 +24,7 @@ function RoadMap() {
           <div className="box">
             <div className="line"></div>
             <div className="content">
-              <div className="imgWrapper-l">
+              <div className="imgWrapper-l bg-red">
                 <img className="emj-cam" src="/cam.png" alt="" />
               </div>
               <div className="info">
@@ -43,7 +39,7 @@ function RoadMap() {
               <div className="info">
                 <p className="tag">Rutinleri Öğrenelim</p>
               </div>
-              <div className="imgWrapper-r">
+              <div className="imgWrapper-r bg-red">
                 <img className="emj-square" src="/learn.png" alt="" />
               </div>
             </div>
@@ -51,7 +47,7 @@ function RoadMap() {
           </div>
         </div>
         <div className="point">
-          <div className="wrapper">
+          <div className="wrapper bg-light-green">
             <p className="tag">Tatil Başlasın</p>
           </div>
         </div>
@@ -59,7 +55,7 @@ function RoadMap() {
           <div className="box">
             <div className="line"></div>
             <div className="content">
-              <div className="imgWrapper-l">
+              <div className="imgWrapper-l bg-half-baked">
                 <img className="emj-square" src="/food.png" alt="" />
               </div>
               <div className="info">
@@ -74,7 +70,7 @@ function RoadMap() {
               <div className="info">
                 <p className="tag">Dostumuzu Temizleyelim</p>
               </div>
-              <div className="imgWrapper-r">
+              <div className="imgWrapper-r bg-half-baked">
                 <img className="emj-poop" src="/poop.png" alt="" />
               </div>
             </div>
@@ -85,7 +81,7 @@ function RoadMap() {
           <div className="box">
             <div className="line"></div>
             <div className="content">
-              <div className="imgWrapper-l">
+              <div className="imgWrapper-l bg-half-baked">
                 <img className="emj-square" src="/cat.png" alt="" />
               </div>
               <div className="info">
@@ -100,7 +96,7 @@ function RoadMap() {
               <div className="info">
                 <p className="tag">Beraber Eğlenelim</p>
               </div>
-              <div className="imgWrapper-r">
+              <div className="imgWrapper-r bg-half-baked">
                 <img className="emj-square" src="/game.png" alt="" />
               </div>
             </div>
@@ -108,7 +104,7 @@ function RoadMap() {
           </div>
         </div>
         <div className="point">
-          <div className="wrapper">
+          <div className="wrapper bg-light-green">
             <p className="tag">Tekrar Buluşalım</p>
           </div>
         </div>

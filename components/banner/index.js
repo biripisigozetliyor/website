@@ -11,13 +11,15 @@ const Banner = () => {
           <div className="navBar">
             <Navigation type="main" />
           </div>
-          <Logo />
-          <h1>Ankara Evde Evcil Hayvan Bakımı</h1>
+          <div className="headline">
+            <Logo />
+            <h1>Ankara Evde Evcil Hayvan Bakımı</h1>
+          </div>
+          <DateSection />
         </div>
         <div className="gradient"></div>
-        <div className="container"></div>
+     
         <div className="curve"></div>
-        <DateSection />
       </section>
     </Fragment>
   )

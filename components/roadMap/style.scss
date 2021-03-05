@@ -1,21 +1,12 @@
 @import "../../assets/style/global.scss";
 
-// .touchstone {
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-// }
-
 .img-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   height: 100%;
-  width: 100px;
-  background-color: #f14249;
+  width: 100px; 
 }
 .img-wrapper-before {
   position: absolute;
@@ -39,8 +30,7 @@
   justify-content: center;
   width: 100%;
   height: auto;
-  margin-top: $space-xxg * 1.5;
-  padding: $space-xl 0;
+  padding: 150px 0 $space-xl 0;
 
   .roadMapContainer {
     width: 50%;
@@ -60,20 +50,22 @@
         justify-content: center;
         width: 200px;
         height: 80px;
-        background-color: #f14249;
-        border-radius: 20px;
-       
-      }
-
-      // background-color: #f14249;
+        border-radius: $radius-lg; 
+        color: $white;
+        border: 2px solid $green;
+        .tag{
+          font-weight: $semibold;
+          font-size: $text-xl;          
+        }
+      }    
     }
     .right {
       align-self: flex-end;
-      border-left: 3px solid $black;
+      border-left: 3px solid $green;
     }
     .left {
       align-self: flex-start;
-      border-right: 3px solid $black;
+      border-right: 3px solid $green;
       box-sizing: content-box;
     }
     .row {
@@ -89,7 +81,7 @@
           width: 370px;
           height: 100px;
           background-color: $light-gray;
-          border-radius: 20px;
+          border-radius: $radius-lg; 
           overflow: hidden;
           -webkit-box-shadow: 0px 4px 18px -9px rgba(0, 0, 0, 0.68);
           -moz-box-shadow: 0px 4px 18px -9px rgba(0, 0, 0, 0.68);
@@ -141,13 +133,13 @@
         }
         .line {
           flex-grow: 1;
-          border: 1px solid black;
+          border: 1px solid $green;
           height: 0;
         }
       }
     }
     .tag {
-      font-size: $text-xl;
+      font-size: $text-lg;
       font-weight: $medium;
     }   
     .p-b-50{
