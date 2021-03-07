@@ -1,32 +1,78 @@
 @import "../../assets/style/global.scss";
+@import "../../assets/style/sass-class.scss";
 .date {
- position: relative;
+  position: relative;
   display: flex;
   bottom: -40px;
   align-items: center;
   justify-content: center;
-  width: 900px;  
+  width: 80%;
+  max-width: 900px;
   background-color: $white;
   border-bottom: $space-lg solid $green;
   border-radius: $radius-lg;
   padding: $space-g $space-sg;
-  
-  -webkit-box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.4);
+  @include shadow(0px 3px 25px 0px rgba(0, 0, 0, 0.4));
+  @include breakpoint(sm) {
+    bottom: 0px;
+    width: 100%;
+    padding:0 0 $space-sg 0;
+  }
 
-  .wrapper {  
+  .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70%;
-    
+    width: 100%;
+    max-width: 550px;
+
     .selectPet {
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
+
+      .square {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90px;
+        height: 90px;
+        border: 2px solid $green;
+        border-radius: $radius;
+        background-color: $white;
+        color: $green;
+        font-size: $text-lg;
+        font-weight: 500;
+        word-break: break-allu;
+        cursor: pointer;
+        @include breakpoint(sm) {
+          width: 20%;
+          border-radius: 0;        
+          height: 80px;
+          font-size: $text-m;
+          border-right: 1px solid $gray;
+          background-color: $green;
+          color: $white;
+
+          &:last-child{
+            border-right: none;
+            border-radius: 0 $radius-lg 0 0;
+          }
+          &:first-child{
+            border-radius: $radius-lg 0 0 0;
+          }
+        }
+      
+        &:hover {
+          background-color: $green;
+          color: $white;
+        }
+      
+      
+      
+      }
     }
 
     .form {
@@ -43,6 +89,10 @@
         align-items: center;
         width: 100%;
 
+        @include breakpoint(sm) {
+          flex-direction: column;
+        }
+
         .dropdown {
           width: 45%;
           position: relative;
@@ -50,6 +100,17 @@
           padding-bottom: $space-sm;
           border-bottom: 2px solid $green;
           cursor: pointer;
+
+          @include breakpoint(sm) {
+            width: 100%;
+            max-width: 300px;
+           padding-bottom: 0;
+           margin-bottom: 40px;
+
+           &:last-child{
+             margin-bottom: 0;
+           }
+          }
 
           .ddType {
             display: flex;
@@ -74,34 +135,32 @@
         justify-content: center;
         align-items: center;
         width: 70%;
+        @include breakpoint(sm) {
+          width: 100%;
+          max-width: 300px;
+        }
       }
     }
 
     .leftSide {
       position: absolute;
-      bottom: -$space-sg;
+      bottom: -48px;
       left: 0;
       margin-left: $space-xxl;
+      
+      @include breakpoint(sm) {
+        display: none;
+       }
     }
     .rightSide {
       position: absolute;
-      bottom: -$space-m;
+      bottom: -16px;
       right: 0;
       margin-right: $space-xxl;
+
+      @include breakpoint(sm) {
+       display: none;
+      }
     }
   }
-}
-
-@media screen and (max-width: 1280px) {
-.date {
-  width: 80%;
-
-  .wrapper{
-    width: 550px;
-  }
-}
-}
-
-@media screen and (max-width: 768px) {
-  
 }

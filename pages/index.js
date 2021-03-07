@@ -14,9 +14,9 @@ function HomePage() {
       </Head>
       <Banner />
       <RoadMap />
-      <Prices />
+      {/* <Prices />
       <OtherServices />
-      <Comments />
+      <Comments /> */}
     </>
   )
 }

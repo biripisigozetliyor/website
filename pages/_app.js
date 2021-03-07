@@ -9,6 +9,7 @@ import "../components/button/style.scss"
 import "../components/otherServices/style.scss"
 import "../components/comments/style.scss"
 import "../assets/style/colors.scss"
+import "../assets/style/sass-class.scss"
 
 export default function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

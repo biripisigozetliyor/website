@@ -1,4 +1,5 @@
 @import "../../assets/style/global.scss";
+@import "../../assets/style/sass-class.scss";
 
 .img-wrapper {
   display: flex;
@@ -6,7 +7,13 @@
   align-items: center;
   position: relative;
   height: 100%;
-  width: 100px; 
+  width: 100px;
+  @include breakpoint(sm) {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    order: 1;
+  }
 }
 .img-wrapper-before {
   position: absolute;
@@ -16,6 +23,9 @@
   height: 30px;
   border-radius: 50%;
   background-color: inherit;
+  @include breakpoint(sm) {
+    display: none;
+  }
 }
 @mixin emoji-box($width, $height) {
   width: $width;
@@ -32,12 +42,23 @@
   height: auto;
   padding: 150px 0 $space-xl 0;
 
+  @include breakpoint(sm) {
+    padding: $space-g $space-xl;
+  }
+
   .roadMapContainer {
     width: 50%;
     max-width: 1000px;
     min-width: 800px;
     display: flex;
     flex-direction: column;
+    @include breakpoint(sm) {
+      width: 100%;
+      min-width: 100%;
+      max-width: none;
+      align-items: center;
+      justify-content: center;
+    }
     .point {
       display: flex;
       align-items: center;
@@ -50,42 +71,61 @@
         justify-content: center;
         width: 200px;
         height: 80px;
-        border-radius: $radius-lg; 
+        border-radius: $radius-lg;
         color: $white;
         border: 2px solid $green;
-        .tag{
+       
+        .tag {
           font-weight: $semibold;
-          font-size: $text-xl;          
+          font-size: $text-xl;
         }
-      }    
+      }
     }
     .right {
       align-self: flex-end;
       border-left: 3px solid $green;
+      @include breakpoint(sm) {
+        align-self: center;
+        border: none;
+      }
     }
     .left {
       align-self: flex-start;
       border-right: 3px solid $green;
       box-sizing: content-box;
+      @include breakpoint(sm) {
+        align-self: center;
+        border: none;
+      }
     }
     .row {
       width: 50%;
       padding-top: 30px;
+      @include breakpoint(sm) {
+        width: 100%;
+        max-width: 350px;
+      }
 
       .box {
         display: flex;
         align-items: center;
+        justify-content: center;
 
         .content {
           display: flex;
           width: 370px;
           height: 100px;
           background-color: $light-gray;
-          border-radius: $radius-lg; 
+          border-radius: $radius-lg;
           overflow: hidden;
-          -webkit-box-shadow: 0px 4px 18px -9px rgba(0, 0, 0, 0.68);
-          -moz-box-shadow: 0px 4px 18px -9px rgba(0, 0, 0, 0.68);
-          box-shadow: 0px 4px 18px -9px rgba(0, 0, 0, 0.68);
+          @include shadow(0px 4px 18px -9px rgba(0, 0, 0, 0.68));
+          @include breakpoint(sm) {
+            background-color: transparent;
+            align-items: center;
+            width: 100%;           
+            height: auto;
+            box-shadow: none;
+          }
 
           .emj-handeshake {
             @include emoji-box(55px, 40px);
@@ -93,31 +133,32 @@
           .emj-cam {
             @include emoji-box(52px, 40px);
           }
-          .emj-poop{
+          .emj-poop {
             @include emoji-box(41.5px, 40px);
           }
-         
-          .emj-square{
+
+          .emj-square {
             @include emoji-box(45px, 45px);
           }
-         
 
           .imgWrapper-r {
             @extend .img-wrapper;
-            -webkit-box-shadow: -10px 0px 21px -12px rgba(0, 0, 0, 0.63);
-            -moz-box-shadow: -10px 0px 21px -12px rgba(0, 0, 0, 0.63);
-            box-shadow: -10px 0px 21px -12px rgba(0, 0, 0, 0.63);
+            @include shadow(-10px 0px 21px -12px rgba(0, 0, 0, 0.63));
+            @include breakpoint(sm) {
+             box-shadow: none;
+            }
 
             &::before {
               @extend .img-wrapper-before;
               left: -15px;
+              @include breakpoint(sm) {
+                box-shadow: none;
+               }
             }
           }
           .imgWrapper-l {
             @extend .img-wrapper;
-            -webkit-box-shadow: 10px 0px 21px -12px rgba(0, 0, 0, 0.63);
-            -moz-box-shadow: 10px 0px 21px -12px rgba(0, 0, 0, 0.63);
-            box-shadow: 10px 0px 21px -12px rgba(0, 0, 0, 0.63);
+            @include shadow(10px 0px 21px -12px rgba(0, 0, 0, 0.63));
 
             &::before {
               @extend .img-wrapper-before;
@@ -129,23 +170,32 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            @include breakpoint(sm) {
+              padding-left: $space-lg;
+              order: 2;
+              flex-grow: 0;
+              justify-content: flex-start;
+            }
           }
         }
         .line {
           flex-grow: 1;
           border: 1px solid $green;
           height: 0;
+          @include breakpoint(sm) {
+            display: none;
+          }
         }
       }
     }
     .tag {
       font-size: $text-lg;
       font-weight: $medium;
-    }   
-    .p-b-50{
+    }
+    .p-b-50 {
       padding-bottom: 50px;
     }
-    .p-t-50{
+    .p-t-50 {
       padding-top: 50px;
     }
   }

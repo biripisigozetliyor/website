@@ -7,7 +7,7 @@ function Prices() {
       <div className="header">
         <Title value="Ziyaret Paketlerimiz" type="white" />
       </div>
-      <div class="boxWrapper">
+      <div className="boxWrapper">
         <Package
           position="normal"
           name="Alex"

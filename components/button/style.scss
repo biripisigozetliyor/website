@@ -1,25 +1,9 @@
 @import "../../assets/style/global.scss";
-
+@import "../../assets/style/sass-class.scss";
 .btn {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-}
-
-.square {
-  width: 90px;
-  height: 90px;
-  border: 2px solid $green;
-  border-radius: $radius;
-  background-color: $white;
-  color: $green;
-  font-size: $text-lg;
-  font-weight: 500;
-
-  &:hover {
-    background-color: $green;
-    color: $white;
-  }
 }
 
 .iconic {
