@@ -3,15 +3,15 @@
 .date {
   position: relative;
   display: flex;
-  bottom: -40px;
   align-items: center;
-  justify-content: center;
-  width: 80%;
-  max-width: 900px;
+  justify-content: center;  
   background-color: $white;
-  border-bottom: $space-lg solid $primary;
+  border-right: 4px solid $yellow;
+  border-left: 4px solid $yellow;
+  border-top: 4px solid $yellow;
+  border-bottom: $space-lg solid $yellow;
   border-radius: $radius-lg;
-  padding: $space-g $space-sg;
+  padding: $space-sg $space-sg;
   @include shadow(0px 3px 25px 0px rgba(0, 0, 0, 0.4));
   @include breakpoint(sm) {
     bottom: 0px;
@@ -67,7 +67,7 @@
       
         &:hover {
           background-color: $primary;
-          color: $white;
+          color: $yellow;
         }
       
       
@@ -83,7 +83,7 @@
       margin-top: $space-sg;
       padding: 0 $space-m;
 
-      .ddWrapper {
+      .select-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -93,13 +93,16 @@
           flex-direction: column;
         }
 
-        .dropdown {
+        .select-item {
           width: 45%;
           position: relative;
           display: inline-block;
           padding-bottom: $space-sm;
           border-bottom: 2px solid $primary;
           cursor: pointer;
+          display: flex;
+            justify-content: space-between;
+            align-items: center;
 
           @include breakpoint(sm) {
             width: 100%;
@@ -110,12 +113,6 @@
            &:last-child{
              margin-bottom: 0;
            }
-          }
-
-          .ddType {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
           }
         }
 
@@ -130,7 +127,7 @@
         }
       }
 
-      .btn {
+      .date-button {
         display: flex;
         justify-content: center;
         align-items: center;

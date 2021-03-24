@@ -1,3 +1,4 @@
+@import "./global.scss";
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&display=swap");
 * {
   padding: 0;
@@ -12,7 +13,7 @@ a {
   text-decoration: none;
 }
 
-input {
+input,select {
   border: none;
   outline: none;
   background-color: transparent;
@@ -23,3 +24,38 @@ input {
   width: 100%;
 }
 
+.btn {
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.iconic {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $radius;
+  background-color: $primary;  
+  font-size: $text-lg;
+  margin-top: $space-xxl;
+  border: none;
+  padding: $space-xs 0;
+  
+  svg {
+    margin-right: $space-m;
+  }
+}
+
+.iconicBorder {
+  @extend .iconic;
+  color: $yellow;
+  border: 2px solid transparent;
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    opacity: .8;
+  }
+}
