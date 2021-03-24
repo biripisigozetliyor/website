@@ -12,6 +12,14 @@ a {
   text-decoration: none;
 }
 
-.layout {
-  position: relative;
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  font-family: "Dosis", sans-serif;
 }
+.react-datepicker-wrapper{
+  width: 100%;
+}
+

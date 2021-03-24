@@ -9,7 +9,7 @@
   margin-top: $space-xg;
   padding: $space-g 0;
   background: rgb(64, 72, 79);
-  background: linear-gradient(171deg, $night 16%, $green 100%);
+  background: linear-gradient(171deg, $night 16%, $primary 100%);
 }
 
 .boxWrapper {
@@ -28,7 +28,7 @@
     width: 30%;
     border-radius: $radius;
     background: rgb(64, 72, 79);
-    background: linear-gradient(171deg, $green 16%, $night 100%);
+    background: linear-gradient(171deg, $primary 16%, $night 100%);
 
     .name {
       font-size: $text-sg;

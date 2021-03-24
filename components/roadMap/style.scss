@@ -73,7 +73,7 @@
         height: 80px;
         border-radius: $radius-lg;
         color: $white;
-        border: 2px solid $green;
+        border: 2px solid $primary;
        
         .tag {
           font-weight: $semibold;
@@ -83,7 +83,7 @@
     }
     .right {
       align-self: flex-end;
-      border-left: 3px solid $green;
+      border-left: 3px solid $primary;
       @include breakpoint(sm) {
         align-self: center;
         border: none;
@@ -91,7 +91,7 @@
     }
     .left {
       align-self: flex-start;
-      border-right: 3px solid $green;
+      border-right: 3px solid $primary;
       box-sizing: content-box;
       @include breakpoint(sm) {
         align-self: center;
@@ -180,7 +180,7 @@
         }
         .line {
           flex-grow: 1;
-          border: 1px solid $green;
+          border: 1px solid $primary;
           height: 0;
           @include breakpoint(sm) {
             display: none;

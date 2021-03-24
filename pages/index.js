@@ -1,6 +1,6 @@
 // import Layout from "../components/layout"
 import Head from "next/head"
-import Banner from "../components/banner"
+import Header from "../components/header"
 import Comments from "../components/comments"
 import OtherServices from "../components/otherServices"
 import Prices from "../components/prices"
@@ -12,8 +12,8 @@ function HomePage() {
       <Head>
         <title>Aanasayfa</title>
       </Head>
-      <Banner />
-      <RoadMap />
+      <Header />
+      {/* <RoadMap /> */}
       {/* <Prices />
       <OtherServices />
       <Comments /> */}

@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
   border-radius: $radius;
-  background-color: $green;
+  background-color: $primary;
   color: $white;
   font-size: $text-lg;
   margin-top: $space-xxl;
@@ -21,7 +21,7 @@
 
   &:hover {
     background-color: $second-green;
-    color: $green;
+    color: $primary;
     border: none;
   }
 
@@ -38,6 +38,6 @@
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
 
   &:hover {
-    border: 2px solid $green;
+    border: 2px solid $primary;
   }
 }
