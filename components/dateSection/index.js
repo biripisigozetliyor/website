@@ -6,8 +6,10 @@ import DatePicker from "react-datepicker"
 import { registerLocale } from "react-datepicker"
 import tr from "date-fns/locale/tr"
 import SmallPaw from "../../assets/svg/smallPaw"
+import { observer } from "mobx-react"
+import { modalStore } from "../../store/modalStore";
 
-const DateSection = () => {
+const DateSection = observer(() => {
   const petWrapper = useRef()
   const [startDate, setStartDate] = useState(new Date())
   const [endDate, setEndDate] = useState(new Date())
@@ -23,9 +25,11 @@ const DateSection = () => {
   moment.locale("tr")
   registerLocale("tr", tr)
 
-  // useEffect(() => {
-  //   console.log("render", dateObj)
-  // }, [dateObj])
+  useEffect(() => {
+    console.log(modalStore.showModal);
+  }, [dateObj])
+
+  
 
   const sendDate = () => {
     setDateObj({
@@ -34,6 +38,7 @@ const DateSection = () => {
       endDate: moment(endDate).format("MMMM Do YYYY"),
       location: options.filter((option) => option.value == selectValue)[0].label
     })
+    modalStore.showModal = true
   }
 
   const selectPet = (e) => {
@@ -117,6 +122,6 @@ const DateSection = () => {
       </div>
     </div>
   )
-}
+})
 
 export default DateSection
