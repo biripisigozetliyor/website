@@ -1,4 +1,3 @@
-import Button from "../button"
 function Package(props) {
   const { position, name, price, info } = props
   return (
@@ -10,7 +9,7 @@ function Package(props) {
       <div className="campaign">
         Aynı gün içerisinde 2. ziyaretimizi ₺45 ücretle gerçekleştiriyoruz.
       </div>
-      <Button type="iconic" value="Randevu Al" icon="smallPaw" />
+      {/* <Button type="iconic" value="Randevu Al" icon="smallPaw" /> */}
     </div>
   )
 }

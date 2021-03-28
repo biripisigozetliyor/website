@@ -23,7 +23,24 @@ input,select {
 .react-datepicker-wrapper{
   width: 100%;
 }
+.react-datepicker__day--in-range,.react-datepicker__day--selected{
+  background-color: $primary !important;
+  color: yellow !important;
+  &:hover{
+    color: #fff !important;
+  }
+}
 
+.react-datepicker__navigation {
+  outline: none !important;
+}
+.react-datepicker__day--keyboard-selected{
+  background-color: transparent !important;
+  color: #000 !important;
+}
+.react-datepicker__day--in-selecting-range{
+  background-color: $secondary !important;
+}
 .btn {
   outline: none;
   cursor: pointer;

@@ -1,36 +1,62 @@
-import React, { useState } from "react"
+import React, { useState, useRef, useEffect } from "react"
+import moment from "moment"
 import Calander from "../../assets/svg/calander"
 import Location from "../../assets/svg/location"
-import Button from "../button"
 import DatePicker from "react-datepicker"
 import { registerLocale } from "react-datepicker"
 import tr from "date-fns/locale/tr"
 import SmallPaw from "../../assets/svg/smallPaw"
 
 const DateSection = () => {
+  const petWrapper = useRef()
   const [startDate, setStartDate] = useState(new Date())
+  const [endDate, setEndDate] = useState(new Date())
   const [selectValue, setSelectValue] = useState()
+  const [petSelected, setpetSelect] = useState()
+  const [dateObj, setDateObj] = useState({})
   const options = [
     { value: 0, label: "Çayyolu" },
     { value: 1, label: "Ümitköy" },
     { value: 2, label: "Yaşamkent" }
   ]
+
+  moment.locale("tr")
   registerLocale("tr", tr)
 
+  // useEffect(() => {
+  //   console.log("render", dateObj)
+  // }, [dateObj])
+
   const sendDate = () => {
-    const selected = []
-    selected.push(
-      startDate,
-      options.filter((option) => option.value == selectValue)[0].label
-    )
-    //TODO: date forman - select pet için state hazırlayıp onu da selected'a basmak gerek. Ve validation hazırlanmalı.
-    console.log(selected)
+    setDateObj({
+      pet: petSelected,
+      startDate: moment(startDate).format("MMMM Do YYYY"),
+      endDate: moment(endDate).format("MMMM Do YYYY"),
+      location: options.filter((option) => option.value == selectValue)[0].label
+    })
+  }
+
+  const selectPet = (e) => {
+    petWrapper.current.childNodes.forEach((li) => {
+      li.style.backgroundColor = "transparent"
+      li.style.color = "#774383"
+    })
+
+    const selectedPet = e.target
+    selectedPet.style.backgroundColor = "#774383"
+    selectedPet.style.color = "#FFD072"
+
+    setpetSelect(e.target.textContent)
   }
 
   return (
     <div className="date">
       <div className="wrapper">
-        <div className="selectPet">
+        <div
+          className="selectPet"
+          ref={petWrapper}
+          onClick={(e) => selectPet(e)}
+        >
           <li className="square">Kedi</li>
           <li className="square">Kuş</li>
           <li className="square">Balık</li>
@@ -42,8 +68,25 @@ const DateSection = () => {
               <DatePicker
                 selected={startDate}
                 onChange={(date) => setStartDate(date)}
-                locale="tr"
+                minDate={new Date()}
+                selectsStart
+                startDate={startDate}
+                endDate={endDate}
                 dateFormat="dd/MM/yyyy"
+                locale="tr"
+              />
+              <Calander />
+            </div>
+            <div className="select-item">
+              <DatePicker
+                selected={endDate}
+                onChange={(date) => setEndDate(date)}
+                selectsEnd
+                startDate={startDate}
+                endDate={endDate}
+                minDate={startDate}
+                dateFormat="dd/MM/yyyy"
+                locale="tr"
               />
               <Calander />
             </div>
