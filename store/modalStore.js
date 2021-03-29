@@ -1,6 +1,6 @@
 import { makeObservable, observable } from "mobx";
 class ModalStore {
-    showModal = false;
+    showModal = true;
 }
 const modalStore = makeObservable(new ModalStore(), {
   showModal: observable,

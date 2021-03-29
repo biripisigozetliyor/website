@@ -1,0 +1,47 @@
+@import "./global.scss";
+
+input,
+select {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  font-family: "Dosis", sans-serif;
+}
+
+.date-form {
+  width: 100%;
+}
+
+.form-item {
+  margin-top: $space-sg;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+input {
+  font-family: "Dosis", sans-serif;
+  font-size: $text-ml;
+  padding-bottom: $space-xs;
+  border-bottom: 2px solid $primary;
+  background-color: transparent;
+
+  &::-webkit-input-placeholder { /* Edge */
+    color: $primary;
+  }
+  
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $primary;
+  }
+  
+  &::placeholder {
+    color: $primary;
+  }
+
+  &:focus{
+      border-bottom: 2px solid $secondary;
+  }
+}
+
+

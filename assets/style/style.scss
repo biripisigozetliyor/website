@@ -13,13 +13,7 @@ a {
   text-decoration: none;
 }
 
-input,select {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  width: 100%;
-  font-family: "Dosis", sans-serif;
-}
+
 .react-datepicker-wrapper{
   width: 100%;
 }
@@ -30,7 +24,6 @@ input,select {
     color: #fff !important;
   }
 }
-
 .react-datepicker__navigation {
   outline: none !important;
 }
@@ -41,6 +34,7 @@ input,select {
 .react-datepicker__day--in-selecting-range{
   background-color: $secondary !important;
 }
+
 .btn {
   outline: none;
   cursor: pointer;

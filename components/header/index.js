@@ -1,8 +1,11 @@
 import React, { Fragment } from "react"
 import Logo from "../../assets/svg/logo"
 import DateSection from "../dateSection"
+import DateModal from "../modal/dateModal"
+import { observer } from "mobx-react"
+import { modalStore } from "../../store/modalStore";
 
-const Header = () => {
+const Header = observer(() => {
   return (
     <Fragment>
       <header>
@@ -24,11 +27,12 @@ const Header = () => {
             </div> */}
           </div>
         </div>
-        <img className="banner-img" src="/header-big-cat.png" alt="cat" />
+        <img className="banner-img" src="/header-big-cat.png" alt="cat" />  
+        {modalStore.showModal &&  <DateModal />}
        
       </header>
     </Fragment>
   )
-}
+})
 
 export default Header

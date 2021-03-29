@@ -1,0 +1,42 @@
+@import "../../assets/style/global.scss";
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal-blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $night;
+    opacity: 0.92;
+  }
+  .modal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: auto;
+    background-color: $white;
+    border-right: 4px solid $secondary;
+    border-left: 4px solid $secondary;
+    border-top: 4px solid $secondary;
+    border-bottom: $space-lg solid $secondary;
+    border-radius: $radius-lg;
+    padding: $space-sg $space-sg;
+    z-index: 2;
+
+    h2 {
+      width: auto;
+      color: $primary;
+      font-weight: $medium;
+      font-size: $text-xl;
+      margin-bottom: $space-xxl;
+    }
+  }
+}
