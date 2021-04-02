@@ -1,5 +1,5 @@
 @import "./global.scss";
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&display=swap");
+@import "./sass-class.scss";
 * {
   padding: 0;
   margin: 0;
@@ -48,8 +48,7 @@ a {
   align-items: center;
   border-radius: $radius;
   background-color: $primary;  
-  font-size: $text-lg;
-  margin-top: $space-xxl;
+  font-size: $text-lg;  
   border: none;
   padding: $space-xs 0;
   
@@ -62,9 +61,8 @@ a {
   @extend .iconic;
   color: $yellow;
   border: 2px solid transparent;
-  -webkit-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
+  @include shadow(0px 3px 8px 0px rgba(0, 0, 0, 0.3));
+ 
 
   &:hover {
     opacity: .8;

@@ -25,9 +25,9 @@ const DateSection = observer(() => {
   moment.locale("tr")
   registerLocale("tr", tr)
 
-  useEffect(() => {
-    console.log(modalStore.showModal);
-  }, [dateObj])
+  // useEffect(() => {
+  //   console.log(modalStore.showModal);
+  // }, [dateObj])
 
   
 
