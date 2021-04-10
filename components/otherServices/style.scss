@@ -1,5 +1,5 @@
 @import "../../assets/style/global.scss";
-
+@import "../../assets/style/sass-class.scss";
 #services {
   display: flex;
   flex-direction: column;
@@ -8,22 +8,32 @@
   width: 100%;
   height: auto;
   padding: $space-g 0;
-  background-color: $night;
+  background-color: $soft-white;
 
   .container {
     position: relative;
-    width: 950px;
+    max-width: 950px;
+    width: 80%;
     height: 600px;
     display: flex;
-    margin-top: $space-xxl;
+    @include breakpoint(md) {
+      flex-direction: column;
+      height: auto;
+    }
 
     .catHand {
       position: absolute;
       bottom: 0;
       left: 32%;
+      color: $primary;
+      width: 40%;
+      max-width: 400px;
       svg {
-        width: 400px;
+        width: 100%;
         height: 400px;
+      }
+      @include breakpoint(md) {
+        display: none;
       }
     }
     .catFinger {
@@ -31,10 +41,31 @@
       align-items: center;
       justify-content: center;
       position: absolute;
+      @include breakpoint(md) {
+        // flex-direction: column;
+        justify-content: flex-start;
+        position: relative;
+        bottom: 0 !important;
+        top: 0 !important;
+        right: 0 !important;
+        left: 0 !important;
+        margin-bottom: 40px;
+      }
+
+      .iconWrapper {
+        @include breakpoint(md) {
+          display: none;
+        }
+      }
 
       .icon {
         position: absolute;
         z-index: 1;
+        @include breakpoint(md) {
+          display: none;
+          left: 87px;
+          bottom: 37px;
+        }
       }
 
       .serviceName {
@@ -42,10 +73,21 @@
         position: absolute;
         z-index: 2;
         text-align: center;
+        @include breakpoint(md) {
+          width: auto;
+          position: relative;
+          bottom: 0 !important;
+          top: 0 !important;
+          right: 0 !important;
+          left: 0 !important;
+          order: 2;
+          margin-left: 20px;
+          text-align: left;
+        }
         span {
           font-size: $text-xl;
           font-weight: $medium;
-          color: $white;
+          color: $night;         
         }
       }
 
@@ -67,11 +109,31 @@
       }
     }
 
+    .paw {
+      display: none;
+      @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $yellow;
+        min-width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: $night;
+        border: 2px solid $secondary;
+        svg {
+          height: 100%;
+          width: 60%;
+        }
+      }
+    }
+
     .f1 {
       left: 15%;
       bottom: 40%;
       .iconWrapper {
         transform: rotate(220deg);
+        color: $secondary;
       }
     }
     .f2 {
@@ -79,6 +141,7 @@
       top: 10%;
       .iconWrapper {
         transform: rotate(220deg);
+        color: $secondary;
       }
     }
     .f3 {
@@ -86,6 +149,7 @@
       top: 15%;
       .iconWrapper {
         transform: rotate(240deg);
+        color: $secondary;
       }
     }
     .f4 {
@@ -93,6 +157,7 @@
       bottom: 30%;
       .iconWrapper {
         transform: rotate(240deg);
+        color: $secondary;
       }
     }
 

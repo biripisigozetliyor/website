@@ -2,13 +2,21 @@
 
 .h3 {
   font-size: $text-g;
-  font-weight: $bold;
+  font-weight: $bold;  
+  text-align: center;
 }
 
 .white {
   color: $white;
 }
 
-.green {
+.primary {
   color: $primary;
 }
+.night {
+  color: $night;
+}
+.yellow {
+  color: $yellow;
+}
+

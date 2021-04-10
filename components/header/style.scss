@@ -1,14 +1,17 @@
 @import "../../assets/style/global.scss";
 @import "../../assets/style/sass-class.scss";
 
-header {  
+header {
   display: flex;
-  align-items: center;
+  // align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 100vh;
   background-color: $primary;
   overflow: hidden;
+  @include breakpoint(md) {
+    background-color: $secondary;
+  }
 
   .left {
     width: 50%;
@@ -16,38 +19,87 @@ header {
     height: inherit;
     z-index: 1;
     overflow: hidden;
+    @include breakpoint(md) {
+      min-width: 100%;
+    }
 
     .content {
       position: relative;
       width: 100%;
       height: inherit;
-      img {
+      @include breakpoint(md) {
+        width: auto;
+      }
+      .frameImg {
         position: absolute;
         right: 0;
-        height: 100vh;
+        // height: 100vh;
         z-index: -1;
+        @include breakpoint(md) {
+          display: none;
+        }
       }
       .frame {
         position: absolute;
         width: inherit;
         height: inherit;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding-left: 5%;
+        @include breakpoint(md) {
+          align-items: center;
+          padding-left: auto !important;
+          width: 100%;
+          justify-content: center !important;
+          padding: $space-xxl $space-m;
+        }
 
-        .logo {
-          width: 310px;
+        .logo-wrapper {
+          position: relative;
+          max-width: 370px;
           display: flex;
           flex-direction: column;
           align-items: center;
           margin-left: 100px;
+          @include breakpoint(md) {
+            margin-left: 0px;
+          }
+          .logo {
+            svg {
+              width: 100%;
+              height: 100%;
+            }
+            @include breakpoint(sm) {
+              height: 150px;
+            }
+          }
           h1 {
             width: auto;
             color: $white;
             font-weight: $medium;
             font-size: $text-xl;
+            margin-top: $space-sm;
+            text-align: center;
+            @include breakpoint(sm) {
+              font-size: $text-ml;
+            }
+          }
+          .rope {
+            position: absolute;
+            bottom: 3px;
+            left: 390px;
+            height: 60px;
+            @include breakpoint(md) {
+              position: relative;
+              bottom: 0px;
+              margin-top: $space-lg;
+              left: 0px;
+              height: 40px;
+            }
+            @include breakpoint(sm) {
+              display: none;
+            }
           }
         }
 
@@ -56,16 +108,28 @@ header {
           margin-top: 130px;
           width: 600px;
           z-index: 3;
+          @include breakpoint(md) {
+            width: 100% !important;
+            max-width: 600px;
+            margin-left: 0 !important;
+            margin-top: 40px !important;
+          }
         }
       }
     }
   }
   .banner-img {
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     right: 0;
     width: 50%;
     max-height: 100vh;
     z-index: 1;
-  }   
+    @include breakpoint(lg) {
+      width: 40%;
+    }
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
 }

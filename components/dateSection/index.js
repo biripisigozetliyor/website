@@ -7,7 +7,7 @@ import { registerLocale } from "react-datepicker"
 import tr from "date-fns/locale/tr"
 import SmallPaw from "../../assets/svg/smallPaw"
 import { observer } from "mobx-react"
-import { modalStore } from "../../store/modalStore";
+import { modalStore } from "../../store/modalStore"
 
 const DateSection = observer(() => {
   const petWrapper = useRef()
@@ -15,7 +15,7 @@ const DateSection = observer(() => {
   const [endDate, setEndDate] = useState(new Date())
   const [selectValue, setSelectValue] = useState()
   const [petSelected, setpetSelect] = useState()
-  const [dateObj, setDateObj] = useState({})
+  const [warning, setWarning] = useState(false)
   const options = [
     { value: 0, label: "Çayyolu" },
     { value: 1, label: "Ümitköy" },
@@ -25,20 +25,20 @@ const DateSection = observer(() => {
   moment.locale("tr")
   registerLocale("tr", tr)
 
-  // useEffect(() => {
-  //   console.log(modalStore.showModal);
-  // }, [dateObj])
-
-  
-
-  const sendDate = () => {
-    setDateObj({
-      pet: petSelected,
-      startDate: moment(startDate).format("MMMM Do YYYY"),
-      endDate: moment(endDate).format("MMMM Do YYYY"),
-      location: options.filter((option) => option.value == selectValue)[0].label
-    })
-    modalStore.showModal = true
+  const dateSet = () => {
+    if (petSelected && startDate && endDate && location) {
+      setWarning(false)      
+      modalStore.dateObj.pet = petSelected
+      modalStore.dateObj.startDate = moment(startDate).format("DD/MM/YYYY")
+      modalStore.dateObj.endDate = moment(endDate).format("DD/MM/YYYY")
+      modalStore.dateObj.location = options.filter(
+        (option) => option.value == selectValue
+      )[0].label
+      modalStore.showModal = true
+    } else {
+      setWarning(true)
+      console.log("warning")
+    }
   }
 
   const selectPet = (e) => {
@@ -97,11 +97,12 @@ const DateSection = observer(() => {
             </div>
             <div className="select-item">
               <select
+                className="select-without-icon"
                 value={selectValue}
                 onChange={(e) => setSelectValue(e.target.value)}
               >
                 <option value="" disabled selected hidden>
-                  Lütfen Konum Seçiniz
+                  Konum Seçiniz
                 </option>
                 {options.map((option, index) => (
                   <option key={index} value={option.value}>
@@ -113,10 +114,17 @@ const DateSection = observer(() => {
             </div>
           </div>
           <div className="date-button">
-            <button className="btn iconicBorder" onClick={sendDate}>
+            <button className="btn iconicBorder" onClick={dateSet}>
               <SmallPaw />
               Randevu Al
             </button>
+          </div>
+          <div className="warning-msg-wrapper">
+            {warning && (
+              <div className="warning-msg fadeIn">
+                Lütfen tüm bilgileri giriniz...
+              </div>
+            )}
           </div>
         </div>
       </div>

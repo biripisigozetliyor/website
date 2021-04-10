@@ -2,8 +2,34 @@
 @import "./sass-class.scss";
 
 input,
-select,
-textarea {
+select {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  font-family: "Dosis", sans-serif;
+}
+
+select {
+  cursor: pointer;
+}
+.select-with-icon {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("/arrow-bottom.svg");
+  background-repeat: no-repeat;
+  background-position-x: 97%;
+  background-position-y: 50%;
+}
+.select-without-icon {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+
+.form-element {
   border: none;
   outline: none;
   background-color: #fff;
@@ -21,25 +47,26 @@ textarea {
 
 .form-item {
   margin-top: $space-m;
-
+  &:first-child {
+    margin-top: 0;
+  }
   button {
     margin-top: $space-sm;
     padding: $space-sm 0;
   }
-
-  &:first-child {
-    margin-top: 0;
+  .asterisk{
+    color: $danger;
   }
 }
 
 label {
-  color: $black;
+  color: $night;
   font-size: $text-m;
   font-weight: $regular;
 }
 
-input {
-  // height: 50px;
+.input {
+  @extend .form-element;
   padding: $space-sm $space-m;
   border-radius: $radius;
   border: 1px solid #dcdce0;
@@ -66,12 +93,19 @@ input {
     font-weight: $regular;
   }
 
-  &:focus{
+  &:focus {
     border: 1px solid $primary;
   }
 }
 
-textArea {
+.placeholder {
+  color: $gray;
+  font-size: $text-m;
+  font-weight: $regular;
+}
+
+.textarea {
+  @extend .form-element;
   width: 100%;
   height: 60px;
   padding: $space-sm $space-m;
@@ -101,15 +135,15 @@ textArea {
     font-weight: $regular;
   }
 
-  &:focus{
+  &:focus {
     border: 1px solid $primary;
   }
 }
 
 .message-area {
-  height: 100px;
+  height: 70px;
 }
 
-.warning{
+.warning {
   border: 1px solid $danger;
 }

@@ -4,11 +4,12 @@ import Brush from "../../assets/svg/Brush"
 import Cactus from "../../assets/svg/Cactus"
 import Trash from "../../assets/svg/Trash"
 import Window from "../../assets/svg/Window"
+import SmallPaw from "../../assets/svg/SmallPaw"
 function OtherServices() {
   return (
     <section id="services">
       <div className="header">
-        <Title value="Evinize de bakıyoruz" type="white" />
+        <Title value="Evinize de bakıyoruz" type="night" />
       </div>
       <div className="container">
         <div className="catFinger f1">
@@ -21,6 +22,9 @@ function OtherServices() {
           <div className="iconWrapper">
             <CatFinger />
           </div>
+          <div className="paw">
+            <Window />
+          </div>
         </div>
         <div className="catFinger f2">
           <div className="serviceName s2">
@@ -31,6 +35,9 @@ function OtherServices() {
           </div>
           <div className="iconWrapper">
             <CatFinger />
+          </div>
+          <div className="paw">
+            <Cactus />
           </div>
         </div>
         <div className="catFinger f3">
@@ -43,6 +50,9 @@ function OtherServices() {
           <div className="iconWrapper">
             <CatFinger />
           </div>
+          <div className="paw">
+            <Brush />
+          </div>
         </div>
         <div className="catFinger f4">
           <div className="serviceName s4">
@@ -53,6 +63,9 @@ function OtherServices() {
           </div>
           <div className="iconWrapper">
             <CatFinger />
+          </div>
+          <div className="paw">
+            <Trash />
           </div>
         </div>
         <div className="catHand">

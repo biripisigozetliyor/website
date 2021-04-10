@@ -13,10 +13,10 @@ function HomePage() {
         <title>Aanasayfa</title>
       </Head>
       <Header />
-      {/* <RoadMap /> */}
-      {/* <Prices />
+      <RoadMap />
+      <Prices />
       <OtherServices />
-      <Comments /> */}
+      {/* <Comments /> */}
     </>
   )
 }

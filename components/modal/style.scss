@@ -1,4 +1,5 @@
 @import "../../assets/style/global.scss";
+@import "../../assets/style/sass-class.scss";
 
 .modal {
   width: 100%;
@@ -8,6 +9,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  @include breakpoint(md) {
+    height: auto !important;   
+  }
 
   .modal-blur {
     position: absolute;
@@ -15,6 +23,11 @@
     height: 100%;
     background-color: $night;
     opacity: 0.92;
+    @include breakpoint(md) {
+      // display: none;
+      background-color: $secondary;
+      opacity: 1;
+    }
   }
   .modal-box {
     position: relative;
@@ -23,6 +36,7 @@
     height: auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: $soft-white;
     border-right: 4px solid $secondary;
     border-left: 4px solid $secondary;
@@ -31,11 +45,19 @@
     border-radius: $radius-lg;
     padding: $space-sg $space-sg;
     z-index: 2;
+    @include breakpoint(md) {
+      flex-direction: column;
+      width: 100%;
+      padding: $space-m !important;
+    }
     .modal-img {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 50%;
+      @include breakpoint(md) {
+        width: 100%;
+      }
 
       img {
         width: 100%;
@@ -47,12 +69,23 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      @include breakpoint(md) {
+        width: 100%;
+      }
       h2 {
         width: auto;
         color: $primary;
         font-weight: $medium;
         font-size: $text-xl;
         margin-bottom: $space-xxl;
+      }
+      .label-with-info {
+        position: relative;
+        .questin-mark-wrapper {
+          position: relative;
+          top: 2px;
+          margin-left: $space-xs;
+        }
       }
     }
     .close-icon-wrapper {
@@ -67,7 +100,7 @@
         border-radius: 50%;
         width: 32px;
         height: 32px;
-        border: 2px solid transparent ;
+        border: 2px solid transparent;
         transition: 0.3s;
 
         &:hover {
@@ -76,4 +109,45 @@
       }
     }
   }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
 }

@@ -8,8 +8,12 @@
   position: relative;
   height: 100%;
   width: 100px;
+  @include breakpoint(md) {
+    width: 80px;
+  }
   @include breakpoint(sm) {
-    width: 90px;
+    @include shadow(rgb(0 0 0 / 67%) 0px 0 10px);
+    min-width: 90px;
     height: 90px;
     border-radius: 50%;
     order: 1;
@@ -40,16 +44,17 @@
   justify-content: center;
   width: 100%;
   height: auto;
-  padding: 150px 0 $space-xl 0;
+  background-color: $yellow;
+  padding: $space-xg 0;
 
   @include breakpoint(sm) {
     padding: $space-g $space-xl;
   }
 
   .roadMapContainer {
-    width: 50%;
+    width: 95%;
     max-width: 1000px;
-    min-width: 800px;
+    // min-width: 800px;
     display: flex;
     flex-direction: column;
     @include breakpoint(sm) {
@@ -58,6 +63,36 @@
       max-width: none;
       align-items: center;
       justify-content: center;
+      border: 2px solid $night;
+      height: 1004px;
+      border-radius: $radius-lg;
+    }
+    .mid {
+      position: relative;
+      z-index: 4;
+      @include breakpoint(sm) {
+        margin: 20px;
+
+        &::before {
+          position: relative;
+          content: "";
+          left: 0;
+          box-sizing: border-box;
+          flex-grow: 1;
+          border: 1px solid $night;
+          background-color: inherit;
+          z-index: 1;
+        }
+        &::after {
+          position: relative;
+          right: 0;
+          content: "";
+          box-sizing: border-box;
+          flex-grow: 1;
+          border: 1px solid $night;
+          background-color: inherit;
+        }
+      }
     }
     .point {
       display: flex;
@@ -69,12 +104,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 200px;
-        height: 80px;
+        padding: $space-m;
         border-radius: $radius-lg;
-        color: $white;
-        border: 2px solid $primary;
-       
+        color: $soft-white;
+
         .tag {
           font-weight: $semibold;
           font-size: $text-xl;
@@ -88,6 +121,9 @@
         align-self: center;
         border: none;
       }
+      .right{
+        padding-left: 15px;
+      }
     }
     .left {
       align-self: flex-start;
@@ -97,13 +133,19 @@
         align-self: center;
         border: none;
       }
+
+      .info{
+        padding-right: 15px;
+      }
     }
     .row {
       width: 50%;
       padding-top: 30px;
       @include breakpoint(sm) {
         width: 100%;
-        max-width: 350px;
+        max-width: 360px;
+        padding-top: 0 !important;
+        margin: 5px 0;
       }
 
       .box {
@@ -122,9 +164,10 @@
           @include breakpoint(sm) {
             background-color: transparent;
             align-items: center;
-            width: 100%;           
+            width: 100%;
             height: auto;
             box-shadow: none;
+            padding: 10px;
           }
 
           .emj-handeshake {
@@ -143,26 +186,21 @@
 
           .imgWrapper-r {
             @extend .img-wrapper;
-            @include shadow(-10px 0px 21px -12px rgba(0, 0, 0, 0.63));
-            @include breakpoint(sm) {
-             box-shadow: none;
-            }
+            // @include shadow(-10px 0px 21px -12px rgba(0, 0, 0, 0.63));
 
             &::before {
               @extend .img-wrapper-before;
               left: -15px;
-              @include breakpoint(sm) {
-                box-shadow: none;
-               }
+             
             }
           }
           .imgWrapper-l {
             @extend .img-wrapper;
-            @include shadow(10px 0px 21px -12px rgba(0, 0, 0, 0.63));
+            // @include shadow(10px 0px 21px -12px rgba(0, 0, 0, 0.63));
 
             &::before {
               @extend .img-wrapper-before;
-              right: -15px;
+              right: -15px;             
             }
           }
           .info {
@@ -175,10 +213,20 @@
               order: 2;
               flex-grow: 0;
               justify-content: flex-start;
+            }           
+            .tag {
+              font-size: $text-lg;
+              font-weight: $medium;
+              color: $night;
+              text-align: center;
+              @include breakpoint(sm) {
+                text-align: left;
+              }     
             }
           }
         }
         .line {
+          min-width: 20px;
           flex-grow: 1;
           border: 1px solid $primary;
           height: 0;
@@ -188,12 +236,12 @@
         }
       }
     }
-    .tag {
-      font-size: $text-lg;
-      font-weight: $medium;
-    }
+
     .p-b-50 {
       padding-bottom: 50px;
+      @include breakpoint(sm) {
+        padding-bottom: 0 !important;
+      }
     }
     .p-t-50 {
       padding-top: 50px;
