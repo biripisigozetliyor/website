@@ -13,64 +13,64 @@ const Cactus = () => {
         d="M16.4611 1.72949H16.8564C18.8175 1.72949 20.6984 2.50857 22.0852 3.89534C23.4719 5.28211 24.251 7.16297 24.251 9.12416V34.509H9.06641V9.12416C9.06641 7.16297 9.84549 5.28211 11.2323 3.89534C12.619 2.50857 14.4999 1.72949 16.4611 1.72949V1.72949Z"
         fill="#FFD072"
         stroke="#FFAA00"
-        stroke-width="2"
-        stroke-miterlimit="10"
+        strokeWidth="2"
+        strokeMiterlimit="10"
       />
       <path
         d="M31.9636 34.5091H21.5513L19.1314 19.4402C18.5144 15.5838 21.7827 12.0166 26.5261 12.0166H26.9792C31.7226 12.0166 34.9909 15.6127 34.3738 19.4402L31.9636 34.5091Z"
         fill="#FFD072"
         stroke="#FFAA00"
-        stroke-width="2"
-        stroke-miterlimit="10"
+        strokeWidth="2"
+        strokeMiterlimit="10"
       />
       <path
         d="M31.404 48.729H7.68709L4.25488 39.5122H34.8362L31.404 48.729Z"
         fill="#FFAA00"
         stroke="#FFAA00"
-        stroke-width="2"
-        stroke-miterlimit="10"
+        strokeWidth="2"
+        strokeMiterlimit="10"
       />
       <path
         d="M36.1574 34.3838H2.9441C1.93243 34.3838 1.1123 35.2039 1.1123 36.2156V37.7389C1.1123 38.7505 1.93243 39.5707 2.9441 39.5707H36.1574C37.1691 39.5707 37.9892 38.7505 37.9892 37.7389V36.2156C37.9892 35.2039 37.1691 34.3838 36.1574 34.3838Z"
         fill="#FEF9FF"
         stroke="#FFAA00"
-        stroke-width="2"
-        stroke-miterlimit="10"
+        strokeWidth="2"
+        strokeMiterlimit="10"
       />
       <path
         d="M11.5335 9.79898L7.55176 6.18359"
         stroke="#FFAA00"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        
       />
       <path
         d="M22.3135 6.83942L26.6616 2.87695"
         stroke="#FFAA00"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        
       />
       <path
         d="M10.1271 19.6807L6.8877 17.1934"
         stroke="#FFAA00"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        
       />
       <path
         d="M9.60577 30.0451L5.62402 26.4297"
         stroke="#FFAA00"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        
       />
       <path
         d="M32.002 26.3526L36.861 23.2578"
         stroke="#FFAA00"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        
       />
       <path
         d="M18.3405 12.933C19.2723 12.933 20.0277 12.1776 20.0277 11.2458C20.0277 10.314 19.2723 9.55859 18.3405 9.55859C17.4087 9.55859 16.6533 10.314 16.6533 11.2458C16.6533 12.1776 17.4087 12.933 18.3405 12.933Z"
@@ -103,16 +103,14 @@ const Cactus = () => {
       <path
         d="M31.4727 17.2421L35.4544 13.0771"
         stroke="#FFAA00"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"        
       />
       <path
         d="M21.9176 26.6706L17.8105 23.5083"
         stroke="#FFAA00"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"        
       />
     </svg>
   )

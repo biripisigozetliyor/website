@@ -1,11 +1,24 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useRef } from "react"
+import Link from "next/link"
 import Logo from "../../assets/svg/logo"
+import MenuIcon from "../../assets/svg/menu"
+import CloseIcon from "../../assets/svg/close"
 import DateSection from "../dateSection"
 import DateModal from "../modal/dateModal"
 import { observer } from "mobx-react"
 import { modalStore } from "../../store/modalStore"
 
 const Header = observer(() => {
+  const topMenu = useRef()
+
+  const openMenu = () => {
+    topMenu.current.classList.remove("top-nav")
+    topMenu.current.classList.add("mobil-menu")
+  }
+  const closeMenu = () => {
+    topMenu.current.classList.remove("mobil-menu")
+    topMenu.current.classList.add("top-nav")
+  }
   return (
     <Fragment>
       <header>
@@ -25,6 +38,34 @@ const Header = observer(() => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="top">
+          <nav className="top-nav" ref={topMenu}>
+            <div className="close-icon-wrapper">
+              <div className="close-icon" onClick={() => closeMenu()}>
+                <CloseIcon />
+              </div>
+            </div>
+            <Link href="/">
+              <a>Anasayfa</a>
+            </Link>
+            <Link href="/">
+              <a>Hakkımızda</a>
+            </Link>
+            <Link href="/">
+              <a>Nasıl Çalışır?</a>
+            </Link>
+            <Link href="/">
+              <a>Blog</a>
+            </Link>
+            <a
+              href="javascript:void(0);"
+              className="menu-icon"
+              onClick={() => openMenu()}
+            >
+              <MenuIcon />
+            </a>
+          </nav>
         </div>
         <img className="banner-img" src="/header-big-cat.png" alt="cat" />
         {modalStore.showModal && <DateModal />}

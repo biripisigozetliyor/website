@@ -1,5 +1,6 @@
-import Navigation from "./navigation"
+// import Navigation from "./navigation"
 import Head from "next/head"
+import Footer from "./footer/index"
 
 function Layout({ children }) {
   return (
@@ -9,9 +10,9 @@ function Layout({ children }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
          <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
       </Head>
-      <Navigation />
+      {/* <Navigation /> */}
       <main>{children}</main>
-      {/* <footer>footer</footer> */}
+      <footer><Footer/></footer>
     </div>
   )
 }

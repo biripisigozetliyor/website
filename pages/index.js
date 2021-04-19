@@ -5,10 +5,11 @@ import Comments from "../components/comments"
 import OtherServices from "../components/otherServices"
 import Prices from "../components/prices"
 import RoadMap from "../components/roadMap"
+import Layout from "../components/layout"
 
 function HomePage() {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Aanasayfa</title>
       </Head>
@@ -17,7 +18,7 @@ function HomePage() {
       <Prices />
       <OtherServices />
       {/* <Comments /> */}
-    </>
+    </Layout>
   )
 }
 

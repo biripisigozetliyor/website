@@ -4,7 +4,6 @@ import Brush from "../../assets/svg/Brush"
 import Cactus from "../../assets/svg/Cactus"
 import Trash from "../../assets/svg/Trash"
 import Window from "../../assets/svg/Window"
-import SmallPaw from "../../assets/svg/SmallPaw"
 function OtherServices() {
   return (
     <section id="services">
