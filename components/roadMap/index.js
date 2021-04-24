@@ -2,7 +2,7 @@ import Title from "../sectionTitle"
 
 function RoadMap() {
   return (
-    <section id="howToWork">
+    <section id="howToWork" className="section">
        <div className="header">
         <Title value="Nasıl Çalışır" type="primary" />
       </div>

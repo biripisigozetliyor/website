@@ -3,7 +3,7 @@ import Package from "./package"
 
 function Prices() {
   return (
-    <section id="prices">
+    <section id="prices" className="section">
       <div className="header">
         <Title value="Ziyaret Paketlerimiz" type="yellow" />
       </div>

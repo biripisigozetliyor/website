@@ -17,6 +17,17 @@ a {
   margin-bottom:$space-xg;
 }
 
+.section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;  
+  width: 100%;
+  height: auto;
+  padding: $space-g $space-xl;
+}
+
 
 .react-datepicker-wrapper{
   width: 100%;

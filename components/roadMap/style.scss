@@ -36,16 +36,8 @@
   height: $height;
 }
 
-#howToWork {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  background-color: $yellow;
-  padding: $space-xg 0;
+#howToWork {   
+  background-color: $yellow;  
 
   @include breakpoint(sm) {
     padding: $space-g $space-xl;

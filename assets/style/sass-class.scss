@@ -14,8 +14,16 @@
     @media (max-width: 768px) {
       @content;
     }
+  } @else if $class == slg {
+    @media (max-width: 960px) {
+      @content;
+    }
   } @else if $class == lg {
     @media (max-width: 1280px) {
+      @content;
+    }
+  } @else if $class == xlg {
+    @media (min-width: 1600px) {
       @content;
     }
   }

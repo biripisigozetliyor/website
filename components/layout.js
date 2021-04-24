@@ -12,7 +12,7 @@ function Layout({ children }) {
       </Head>
       {/* <Navigation /> */}
       <main>{children}</main>
-      <footer><Footer/></footer>
+      <footer className="section"><Footer/></footer>
     </div>
   )
 }

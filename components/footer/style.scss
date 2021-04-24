@@ -2,10 +2,7 @@
 @import "../../assets/style/sass-class.scss";
 
 footer {
-  position: relative;
   background-color: $night;
-  padding: $space-xg $space-lg;
-  width: 100%;
 
   .footer-img {
     position: absolute;
@@ -24,114 +21,101 @@ footer {
     color: $white;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    @include breakpoint(md) {
+      flex-direction: column;
+    }
 
-    .footer-content {
-      width: auto;
-      min-width: 700px;
-      height: 170px;
+    .part {
+      width: 25%;
+      height: 100%;
+      padding: $space-m $space-xl 0;
+      border-right: 1px solid $soft-white;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      @include breakpoint(lg){
-        width: auto;
-        min-width: 500px;
+      flex-direction: column;
+      @include breakpoint(slg){
+        padding: $space-m $space-m 0;
       }
 
-      @include breakpoint(md) {       
-        height: auto;
-        flex-direction: column;
-        justify-content: center;
+      @include breakpoint(md) {
+        padding: $space-xl 0;
+        border-right: none;
+        border-bottom: 1px solid $soft-white;
+        width: 100%;
         align-items: center;
       }
-
-      @include breakpoint(sm){
-       width: 100%;
-       min-width: 100px;
+      &:last-child {
+        border: none;
+      }
+      h5 {
+        font-size: $text-lg;
+        letter-spacing: 0.3px;
+        margin-bottom: $space-lg;
+      }
+      .nav-item {
+        margin-bottom: $space-xs;
+        cursor: pointer;
+        a {
+          font-weight: $regular;
+          color: $white;
+          transition: 0.3s;
+          &:hover {
+            color: $yellow;
+          }
+        }
       }
 
-      .part {
-        width: auto;
-        min-width: 270px;
-        height: 100%;
-        padding: $space-m $space-xl 0;
-        border-right: 1px solid $soft-white;
+      .media-box {
         display: flex;
-        flex-direction: column;
 
-        @include breakpoint(lg) {
-          min-width: 100px;
-          width: 25%;
-        }
-
-        @include breakpoint(md) {
-          padding: $space-m;
-          border-right: none;
-          border-bottom: 1px solid $soft-white;
-          width: 200px;
-        }
-        &:last-child {
-          border: none;
-        }
-        h5 {
-          font-size: $text-lg;
-          letter-spacing: 0.3px;
-          margin-bottom: $space-lg;
-        }
-        .nav-item {
-          margin-bottom: $space-xs;
+        .socialmedia-item {
+          margin-left: $space-lg;
+          color: $soft-white;
+          transition: 0.3s;
           cursor: pointer;
           a {
-            font-weight: $regular;
-            color: $white;
-            transition: 0.3s;
-            &:hover {
-              color: $yellow;
-            }
+            color: inherit;
           }
-        }
+          &:hover {
+            color: $yellow;
+          }
 
-        .media-box {
-          display: flex;
-
-          .socialmedia-item {
-            margin-left: $space-lg;
-            color: $soft-white;
-            transition: 0.3s;
-            cursor: pointer;
-            a {
-              color: inherit;
-            }
-            &:hover {
-              color: $yellow;
-            }
-
-            &:first-child {
-              margin-left: 0;
-            }
+          &:first-child {
+            margin-left: 0;
           }
         }
       }
-      .contact {
-        .contact-item {
-          position: relative;
-          margin-bottom: $space-m;
-          display: flex;
+    }
+    .logo {
+      svg {
+        width: 100%;
+      }
+    }
+    .navigation {
+      min-width: 220px;
+    }
+    .social {
+      min-width: 210px;
+    }
+    .contact {
+      min-width: 210px;
+      .contact-item {
+        position: relative;
+        margin-bottom: $space-m;
+        display: flex;
 
-          a {
-            display: block;
-            min-width: 90px;
-            word-break: break-all;
-            position: relative;
-            bottom: 1px;
-            margin-left: $space-xs;
-            font-weight: $regular;
-            color: $white;
-            transition: 0.3s;
-            &:hover {
-              color: $yellow;
-            }
+        a {
+          display: block;
+          // min-width: 90px;
+          word-break: break-all;
+          position: relative;
+          bottom: 1px;
+          margin-left: $space-xs;
+          font-weight: $regular;
+          color: $white;
+          transition: 0.3s;
+          &:hover {
+            color: $yellow;
           }
         }
       }

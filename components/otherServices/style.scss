@@ -1,13 +1,7 @@
 @import "../../assets/style/global.scss";
 @import "../../assets/style/sass-class.scss";
+
 #services {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  padding: $space-g 0;
   background-color: $soft-white;
 
   .container {
@@ -16,7 +10,12 @@
     width: 80%;
     height: 600px;
     display: flex;
+    @include breakpoint(slg) {
+      width: 100%;
+    }
+
     @include breakpoint(md) {
+      width: 100%;
       flex-direction: column;
       height: auto;
     }
@@ -40,7 +39,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      position: absolute;
+      position: absolute;      
       @include breakpoint(md) {
         // flex-direction: column;
         justify-content: flex-start;
@@ -73,6 +72,7 @@
         position: absolute;
         z-index: 2;
         text-align: center;
+        word-break: break-word;
         @include breakpoint(md) {
           width: auto;
           position: relative;
@@ -87,25 +87,43 @@
         span {
           font-size: $text-xl;
           font-weight: $medium;
-          color: $night;         
+          color: $night;
+          @include breakpoint(slg) {
+            font-size: $text-lg;
+          }
         }
       }
 
       .s1 {
         right: 100%;
         top: 60%;
+        @include breakpoint(slg) {
+          right: 25%;
+          top: -60%;
+        }
       }
       .s2 {
         right: 100%;
         bottom: 60%;
+        @include breakpoint(slg) {
+          bottom: 90%;
+        }
       }
       .s3 {
         left: 100%;
         bottom: 60%;
+        @include breakpoint(slg) {
+          left: 60%;
+          bottom: 110%;
+        }
       }
       .s4 {
         left: 100%;
         top: 60%;
+        @include breakpoint(slg) {
+          left: 10%;
+          top: -50%;
+        }
       }
     }
 
@@ -155,6 +173,9 @@
     .f4 {
       right: 15%;
       bottom: 30%;
+      @include breakpoint(md) {
+       margin-bottom: 0 !important;
+      }
       .iconWrapper {
         transform: rotate(240deg);
         color: $secondary;

@@ -6,7 +6,7 @@ import Trash from "../../assets/svg/Trash"
 import Window from "../../assets/svg/Window"
 function OtherServices() {
   return (
-    <section id="services">
+    <section id="services" className="section">
       <div className="header">
         <Title value="Evinize de bakıyoruz" type="night" />
       </div>

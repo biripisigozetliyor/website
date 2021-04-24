@@ -1,28 +1,23 @@
 @import "../../assets/style/global.scss";
 @import "../../assets/style/sass-class.scss";
 
-#prices {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  padding: $space-xg 0;
+#prices {  
   background: $night;
   // background: linear-gradient(171deg, $night 50%, $night 100%);
 
   .boxWrapper {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 90%;
     max-width: 1080px;
     margin-top: $space-xxg;
-    @include breakpoint(md) {
+    @include breakpoint(md) {      
       flex-direction: column;
       margin-top: 0;
+    }
+    @include breakpoint(sm) {      
+     width: 100%;
     }
   
     .box {
@@ -44,6 +39,9 @@
         width: 80%;
         max-width: 400px;
         margin-bottom: $space-xg;      
+      }
+      @include breakpoint(sm) {
+        width: 100%;       
       }
       &:last-child {
         @include breakpoint(md) {

@@ -13,6 +13,9 @@
   border-radius: $radius-lg;
   padding: $space-sg $space-sg $space-xxl; 
   @include shadow(0px 3px 25px 0px rgba(0, 0, 0, 0.4));
+  @include breakpoint(slg) {    
+    padding: $space-sg $space-xl $space-xxl;
+  }
   @include breakpoint(sm) {
     bottom: 0px;
     width: 100%;
@@ -83,7 +86,8 @@
       width: 100%;
       margin-top: $space-sg;
       @include breakpoint(sm) {
-        margin-top: $space-xxl;
+        margin-top: 0;
+        padding: $space-xxl $space-sm $space-m;
       }
 
       .select-wrapper {

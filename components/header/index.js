@@ -10,22 +10,27 @@ import { modalStore } from "../../store/modalStore"
 
 const Header = observer(() => {
   const topMenu = useRef()
+  const leftSection = useRef()
 
   const openMenu = () => {
+    document.body.style.overflow = "hidden"
+    leftSection.current.style.filter = "blur(4px)"
     topMenu.current.classList.remove("top-nav")
     topMenu.current.classList.add("mobil-menu")
   }
   const closeMenu = () => {
+    document.body.style.overflow = "auto"
+    leftSection.current.style.filter = "blur(0px)"
     topMenu.current.classList.remove("mobil-menu")
     topMenu.current.classList.add("top-nav")
   }
   return (
     <Fragment>
       <header>
-        <div className="left">
-          <div className="content">
-            <div className="frame">
-              <img className="frameImg" src="/frame.png" alt="frame" />
+        <div className="left" ref={leftSection}>
+          <div className="container">
+            <img className="frameImg" src="/frame.png" alt="frame" />
+            <div className="content">
               <div className="logo-wrapper">
                 <div className="logo">
                   <Logo />
@@ -40,6 +45,7 @@ const Header = observer(() => {
           </div>
         </div>
         <div className="top">
+          <div className="space"></div>
           <nav className="top-nav" ref={topMenu}>
             <div className="close-icon-wrapper">
               <div className="close-icon" onClick={() => closeMenu()}>
