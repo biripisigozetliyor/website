@@ -1,0 +1,115 @@
+@import "../../assets/style/global.scss";
+@import "../../assets/style/sass-class.scss";
+
+.nav { 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+ 
+  .media-box{
+    display: none;
+  }
+  .nav-item {
+    color: $white;
+    font-size: $text-lg;
+    font-weight: $bold;
+    cursor: pointer;
+    margin-right: $space-xl;
+    transition: 0.3s;
+
+    &:hover{
+      color: $yellow;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
+  .menu-icon {
+    display: none;
+    width: 32px;
+    height: 32px;
+    color: $primary;
+    background-color: $yellow;
+    border-radius: 50%;
+
+    @include breakpoint(sm) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .close-icon-wrapper {
+    display: none;
+  }
+}
+.mobil-menu {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 250px;
+  background-color: $night;
+  padding: $space-m;
+  a {
+    font-size: $text-lg;
+    font-weight: $bold;
+    cursor: pointer;
+    display: block;
+    color: $yellow;
+    // margin-top: $space-xxl;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+  .close-icon-wrapper {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    .close-icon {
+      color: $yellow;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+    }
+  }
+  .media-box {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    padding-top: $space-lg;
+    margin-top: $space-sm;
+    border-top: 1px solid $white;
+
+    .socialmedia-item {
+      margin-left: $space-lg;
+      color: $soft-white;
+      transition: 0.3s;
+      cursor: pointer;
+      a {
+        color: inherit;
+        svg{
+          width: 16px;
+        }
+      }
+      &:hover {
+        color: $yellow;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

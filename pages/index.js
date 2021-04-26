@@ -1,15 +1,15 @@
-// import Layout from "../components/layout"
+import React, {Fragment} from "react"
 import Head from "next/head"
 import Header from "../components/header"
 import Comments from "../components/comments"
 import OtherServices from "../components/otherServices"
 import Prices from "../components/prices"
 import RoadMap from "../components/roadMap"
-import Layout from "../components/layout"
+import Footer from "../components/footer"
 
 function HomePage() {
   return (
-    <Layout>
+    <Fragment>
       <Head>
         <title>Aanasayfa</title>
       </Head>
@@ -18,7 +18,8 @@ function HomePage() {
       <Prices />
       <OtherServices />
       {/* <Comments /> */}
-    </Layout>
+      <footer className="section"><Footer/></footer>
+    </Fragment>
   )
 }
 

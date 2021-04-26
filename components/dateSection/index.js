@@ -35,6 +35,7 @@ const DateSection = observer(() => {
         (option) => option.value == selectValue
       )[0].label
       modalStore.showModal = true
+      document.body.style.overflow = "hidden"
     } else {
       setWarning(true)
       console.log("warning")

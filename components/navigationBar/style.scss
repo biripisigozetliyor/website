@@ -1,0 +1,49 @@
+@import "../../assets/style/global.scss";
+@import "../../assets/style/sass-class.scss";
+
+.layout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: $space-m $space-xg;
+  background-color: $primary;
+  height: 90px;
+  z-index: 10;
+  // -webkit-box-shadow: 0px 5px 14px -1px rgba(0, 0, 0, 0.75);
+  // -moz-box-shadow: 0px 5px 14px -1px rgba(0, 0, 0, 0.75);
+  // box-shadow: 0px 5px 14px -1px rgba(0, 0, 0, 0.75);
+
+  @include breakpoint(sm) {
+    padding: 0;
+    height: auto;
+    background-color: transparent;
+    position: absolute;
+  }
+
+  .nav-logo {
+    height: 100%;
+    width: 35%;
+    max-width: 200px;
+    svg {
+      height: 100%;
+    }
+
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
+  .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 60%;
+    max-width: 500px;
+    @include breakpoint(sm) {
+      padding: $space-m;
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+}

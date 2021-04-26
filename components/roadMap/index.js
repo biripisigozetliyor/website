@@ -3,13 +3,13 @@ import Title from "../sectionTitle"
 function RoadMap() {
   return (
     <section id="howToWork" className="section">
-       <div className="header">
+      <div className="header">
         <Title value="Nasıl Çalışır" type="primary" />
       </div>
       <div className="roadMapContainer">
         <div className="point">
           <div className="wrapper bg-night">
-            <p className="tag">Randevu Al</p>
+            <p className="tag">Randevu al</p>
           </div>
         </div>
         <div className="row left p-t-50 ">
@@ -53,7 +53,7 @@ function RoadMap() {
         </div>
         <div className="point mid">
           <div className="wrapper bg-night">
-            <p className="tag">Tatil Başlasın</p>
+            <p className="tag">İyi yolculuklar, artık hazırız!</p>
           </div>
         </div>
         <div className="row right p-t-50">

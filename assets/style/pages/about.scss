@@ -1,0 +1,10 @@
+@import "../global.scss";
+@import "../sass-class.scss";
+
+#about {
+  background-color: $soft-white; 
+}
+
+.small-page{
+  min-height: calc(100vh - 381px);
+}

@@ -9,7 +9,7 @@ function Package(props) {
       <div className="campaign">
         Aynı gün içerisinde 2. ziyaretimizi ₺45 ücretle gerçekleştiriyoruz.
       </div>
-      <button className="btn yellow-gradient">Randevu al</button>
+      <button className="btn yellow-bg-btn">Randevu al</button>
     </div>
   )
 }

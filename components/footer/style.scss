@@ -2,6 +2,8 @@
 @import "../../assets/style/sass-class.scss";
 
 footer {
+  // position: fixed !important;
+  // bottom: 0;
   background-color: $night;
 
   .footer-img {
@@ -17,6 +19,7 @@ footer {
 
   .container {
     width: 100%;
+    max-width: 1200px;
     height: 100%;
     color: $white;
     display: flex;
@@ -26,14 +29,15 @@ footer {
       flex-direction: column;
     }
 
-    .part {
+    .footer-box {
       width: 25%;
       height: 100%;
       padding: $space-m $space-xl 0;
       border-right: 1px solid $soft-white;
       display: flex;
-      flex-direction: column;
-      @include breakpoint(slg){
+      justify-content: center;
+
+      @include breakpoint(slg) {
         padding: $space-m $space-m 0;
       }
 
@@ -51,6 +55,10 @@ footer {
         font-size: $text-lg;
         letter-spacing: 0.3px;
         margin-bottom: $space-lg;
+      }
+      .box-container {
+        display: flex;
+        flex-direction: column;
       }
       .nav-item {
         margin-bottom: $space-xs;

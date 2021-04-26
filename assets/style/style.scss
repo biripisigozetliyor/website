@@ -9,6 +9,10 @@
   font-family: "Dosis", sans-serif;
 }
 
+body{
+  min-height: 100vh;
+}
+
 a {
   text-decoration: none;
 }
@@ -26,6 +30,22 @@ a {
   width: 100%;
   height: auto;
   padding: $space-g $space-xl;
+}
+
+.sec-container{
+  width: 100%;
+  max-width: 1200px;
+
+  .h3{
+    margin-bottom: $space-g;
+  }
+}
+
+.main-p{
+  line-height: 28px;
+  text-align:justify;
+  font-size: $text-ml;
+  color: $night;
 }
 
 
@@ -72,9 +92,17 @@ a {
     margin-right: $space-m;
   }
 }
-.yellow-gradient{
-  background: rgb(255,208,114);
-  background: linear-gradient(180deg, rgba(255,208,114,1) 24%, rgba(255,243,114,1) 100%);
+.yellow-bg-btn{
+  background: $yellow;
+  // background: linear-gradient(180deg, rgba(255,208,114,1) 24%, rgba(255,243,114,1) 100%);
+  border: 2px solid transparent;
+  transition: .3s;
+
+  &:hover{
+    border: 2px solid $yellow;
+    background: transparent;
+    color: $white;
+  }
 }
 
 .iconicBorder {
@@ -85,5 +113,73 @@ a {
 
   &:hover {
     opacity: .8;
+  }
+}
+
+
+.mobil-menu {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 250px;
+  background-color: $night;
+  padding: $space-m;
+  a {
+    font-size: $text-lg;
+    font-weight: $bold;
+    cursor: pointer;
+    display: block;
+    color: $yellow;
+    // margin-top: $space-xxl;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+  .close-icon-wrapper {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    .close-icon {
+      color: $yellow;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+    }
+  }
+  .media-box {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    padding-top: $space-lg;
+    margin-top: $space-sm;
+    border-top: 1px solid $white;
+
+    .socialmedia-item {
+      margin-left: $space-lg;
+      color: $soft-white;
+      transition: 0.3s;
+      cursor: pointer;
+      a {
+        color: inherit;
+        svg{
+          width: 16px;
+        }
+      }
+      &:hover {
+        color: $yellow;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
   }
 }

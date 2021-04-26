@@ -12,6 +12,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import "../components/modal/style.scss"
 import "../assets/style/form-input.scss"
 import "../components/footer/style.scss"
+import "../components/navigationBar/style.scss"
+import "../components/navigation/style.scss"
+import "../assets/style/pages/about.scss"
 
 export default function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
