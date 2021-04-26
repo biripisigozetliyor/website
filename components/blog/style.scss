@@ -1,0 +1,52 @@
+@import "../../assets/style/global.scss";
+@import "../../assets/style/sass-class.scss";
+
+.blog-cart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: auto;
+  border: 4px solid $yellow;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  margin-top: $space-g;
+  -webkit-box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+  -moz-box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+  cursor: pointer;
+
+  &:hover {
+    .post-content {
+      background-color: $soft-white;
+    }
+  } 
+
+  .post-img {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .post-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    padding: 0 $space-lg;
+    background-color: $yellow;
+    transition: 0.5s;
+
+    h4 {
+      font-size: $text-m;
+      font-weight: $semibold;
+      color: $night;
+      line-height: 24px;
+    }
+  }
+}

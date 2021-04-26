@@ -1,0 +1,96 @@
+@import "../global.scss";
+@import "../sass-class.scss";
+
+// #blog {
+//   background-color: $soft-white;
+// }
+.page-header {
+  position: relative;
+  background-color: $night;
+  min-height: 300px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+
+  .last-blog-container {
+    position: absolute;
+    top: 25%;
+    width: 80%;
+    max-width: 1200px;
+    background-color: $soft-white;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    border: 4px solid $yellow;
+    border-radius: $radius-lg;
+    -webkit-box-shadow: 1px 5px 16px 1px rgba(0, 0, 0, 0.66);
+    -moz-box-shadow: 1px 5px 16px 1px rgba(0, 0, 0, 0.66);
+    box-shadow: 1px 5px 16px 1px rgba(0, 0, 0, 0.66);
+    overflow: hidden;
+
+    .last-blog-img {
+      background-image: url("/last-blog.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 50%;
+      height: 100%;
+    }
+    .last-blog-detail {
+      position: relative;
+      width: 50%;
+      padding: $space-g $space-xxl;
+      background-color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   
+      .blog-abs {
+        h4 {
+          font-size: $text-xl;
+          font-weight: $semibold;
+          color: $night;
+          line-height: 30px;
+        }
+        p {
+          font-size: $text-ml;
+          margin-top: $space-xl;
+          line-height: 23px;
+          text-align: justify;
+        }
+      }
+
+      .read-more {
+        margin-top: $space-xl;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        .read-more-btn {
+          font-weight: $medium;
+          color: $soft-white;
+          width: 200px;
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}
+.section-blog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 200px 0 $space-g;
+  width: 100%;
+  height: auto;
+
+  .blog-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 1200px;
+  }
+}

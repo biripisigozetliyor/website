@@ -42,7 +42,7 @@ function Navigation(props) {
       <Link href="/">
         <a className="nav-item">Nasıl Çalışır?</a>
       </Link>
-      <Link href="/">
+      <Link href="/blog">
         <a className="nav-item">Blog</a>
       </Link>
       <a

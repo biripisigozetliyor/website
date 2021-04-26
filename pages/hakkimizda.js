@@ -2,10 +2,10 @@
 import Layout from "../components/layout"
 import Title from "../components/sectionTitle"
 
-function HomePage() {
+function AboutPage() {
   return (
     <Layout>
-      <section id="about" className="section small-page">
+      <section className="section small-page bg-softWhite">
         <div className="sec-container">
           <div className="header">
             <Title value="Hakkımızda" type="night" />
@@ -42,4 +42,4 @@ function HomePage() {
   )
 }
 
-export default HomePage
+export default AboutPage

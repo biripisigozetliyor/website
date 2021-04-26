@@ -30,6 +30,7 @@ a {
   width: 100%;
   height: auto;
   padding: $space-g $space-xl;
+  z-index: 1;
 }
 
 .sec-container{
@@ -41,13 +42,16 @@ a {
   }
 }
 
+.small-page{
+  min-height: calc(100vh - 381px);
+}
+
 .main-p{
   line-height: 28px;
   text-align:justify;
   font-size: $text-ml;
   color: $night;
 }
-
 
 .react-datepicker-wrapper{
   width: 100%;
@@ -93,8 +97,7 @@ a {
   }
 }
 .yellow-bg-btn{
-  background: $yellow;
-  // background: linear-gradient(180deg, rgba(255,208,114,1) 24%, rgba(255,243,114,1) 100%);
+  background: $yellow;  
   border: 2px solid transparent;
   transition: .3s;
 
@@ -181,5 +184,20 @@ a {
         margin-left: 0;
       }
     }
+  }
+}
+
+.post-date {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+
+  time {
+    font-size: $text-sm;
+    font-weight: $medium;
+    color: $night;
+    background-color: $yellow;
+    padding: 6px;
+    border-radius: $radius;
   }
 }

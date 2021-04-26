@@ -14,7 +14,9 @@ import "../assets/style/form-input.scss"
 import "../components/footer/style.scss"
 import "../components/navigationBar/style.scss"
 import "../components/navigation/style.scss"
-import "../assets/style/pages/about.scss"
+import "../assets/style/pages/blog.scss"
+import "../assets/style/pages/blog-post.scss"
+import "../components/blog/style.scss"
 
 export default function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
